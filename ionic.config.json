@@ -1,0 +1,7 @@
+{
+  "name": "Hotel_Insectos",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
