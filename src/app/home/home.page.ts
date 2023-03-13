@@ -13,6 +13,7 @@ export class HomePage {
     ) {}
 
   async onHumo(){
+    
 }
 
 }

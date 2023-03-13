@@ -21,6 +21,7 @@ export class LoginPage implements OnInit {
   }
 
   async onLogin(){
+
     try {
       const user = await this.authSvc.onLogin(this.user);
       if(user) {
@@ -33,8 +34,6 @@ export class LoginPage implements OnInit {
       const errX = JSON.parse(err)
       this.presentToast(errX['code'], 'middle')
     }
-    
-
   }
 
   async onNewUser(){
