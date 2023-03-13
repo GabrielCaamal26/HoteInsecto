@@ -1,27 +1,36 @@
-<ion-header>
-  <ion-toolbar color="primary">
-    <ion-title>REGISTRO</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content padding>
-  <ion-item>
-    <ion-label>
-      Email
-      <ion-input type="text" [(ngModel)]="user.email"></ion-input>
-    </ion-label>
-  </ion-item>
-
-  <ion-item>
-    <ion-label>
-      Password
-      <ion-input type="password" [(ngModel)]="user.password"></ion-input>
-    </ion-label>
-  </ion-item>
-
-  <ion-item-divider>
-    <ion-button size="large" (click)="onRegister()">
-      Crear usuario
-    </ion-button>
-  </ion-item-divider>
+<ion-content>
+  <div id="header">
+    <div id="app-bar">
+      <ion-icon name="arrow-back" routerLink="/login"></ion-icon>
+        <div id="logo">
+          <img src="https://cdn-icons-png.flaticon.com/512/1971/1971452.png" alt="">
+        </div>
+        <div></div>
+    </div>
+    <h1>Registrate</h1>
+    <p>Crea tu cuenta para ser parte de la aventura</p>
+  </div>
+  <div class="wrapper">
+    <ion-card class="form-wrapper">
+      <ion-card-content>
+        <ion-item>
+          <ion-icon name="person"></ion-icon>
+          <ion-input type="text" placeholder="Nombre" [(ngModel)]="user.email"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="mail"></ion-icon>
+          <ion-input type="text" placeholder="Correo" [(ngModel)]="user.email"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="lock-closed"></ion-icon>
+            <ion-input type="password" placeholder="Contraseña" [(ngModel)]="user.password" ></ion-input>
+        </ion-item>
+        <ion-item-divider>
+          <ion-button expand="block" (click)="onRegister()">
+            Crear cuenta
+          </ion-button>
+          </ion-item-divider>
+      </ion-card-content>
+    </ion-card>
+  </div>
 </ion-content>

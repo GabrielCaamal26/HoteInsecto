@@ -1,31 +1,34 @@
-<ion-header>
-  <ion-toolbar color="primary">
-    <ion-title>LOGIN</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content padding>
-  <ion-item>
-    <ion-label>
-      Correo electronico
-      <ion-input type="text" [(ngModel)]="user.email"></ion-input>
-    </ion-label>
-  </ion-item>
-
-  <ion-item>
-    <ion-label>
-      Contraseña
-      <ion-input type="password" [(ngModel)]="user.password"></ion-input>
-    </ion-label>
-  </ion-item>
-
-  <ion-item-divider>
-    <ion-button size="medium" (click)="onLogin()">
-      Login
-    </ion-button>
-
-    <ion-button size="medium" routerLink="/register">
-      Registrate
-    </ion-button>
-  </ion-item-divider>
+<ion-content>
+  <div id="header">
+    <div id="app-bar">
+        <div id="logo">
+          <img src="https://cdn-icons-png.flaticon.com/512/1971/1971452.png" alt="">
+        </div>
+        <div></div>
+    </div>
+    <h1>The Bug Home</h1>
+    <p>Inicia sesión para acompañarnos en esta beevrante aventura</p>
+  </div>
+  <div class="wrapper">
+    <ion-card class="form-wrapper">
+      <ion-card-content>
+        <ion-item>
+            <ion-icon name="mail"></ion-icon>
+            <ion-input type="text" placeholder="Correo" [(ngModel)]="user.email"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="lock-closed"></ion-icon>
+            <ion-input type="password" placeholder="Contraseña" [(ngModel)]="user.password" ></ion-input>
+        </ion-item>
+      <ion-button expand="block" (click)="onLogin()">
+        Login
+      </ion-button>
+      <ion-button expand="block"  routerLink="/register">
+        Registrate
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+  </div>
 </ion-content>
+
+
