@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFireDatabase } from '@angular/fire/compat/database';
 
 @Component({
   selector: 'app-luz',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LuzPage implements OnInit {
 
-  constructor() { }
+  medicion: number;
+  constructor(public database: AngularFireDatabase) { this.leerLuz();}
 
-  ngOnInit() {
+  ngOnInit() {}
+  
+  leerLuz(){
+    const path='Hotel_Insectos/Luz_Actual/';
+    this.database.object(path).valueChanges().subscribe(res=>{
+      console.log('Luminosidad: ',res,'%');
+      if (typeof res === 'number') {
+        this.medicion = res;
+      }
+    })
   }
 
 }

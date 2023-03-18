@@ -8,9 +8,7 @@ import { Router } from '@angular/router';
 })
 export class HomePage {
 
-  constructor( 
-    private router: Router
-    ) {}
+  constructor( private router: Router) {}
 
   async onHumo(){
     

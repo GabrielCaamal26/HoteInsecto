@@ -9,15 +9,22 @@
     </div>
   </div>
 
+
   <ion-card>
     <ion-card-header>
-      <ion-card-title>Detección de Luz</ion-card-title>
+      <ion-card-title>Detección de luz</ion-card-title>
     </ion-card-header>
     <ion-card-content>
-      <p></p>
-      <ion-button expand="block"  routerLink="/humo">
-        Monitorear
-      </ion-button>
+      <p>Las abejas necesitan un espacio libre de luz para estar cómodas.
+        Es por ello que se busca tener un control del ambiente en el que se encuentran. Para así poder ofrecerles una
+        mejor calidad de vida.
+      </p>
+      <ion-item>
+        <ion-badge slot="end">{{medicion}}%</ion-badge>
+        <ion-label>
+          <p><ion-icon name="sunny-outline"></ion-icon>Luminosidad:</p> 
+        </ion-label>
+      </ion-item>
     </ion-card-content>
   </ion-card>
 
