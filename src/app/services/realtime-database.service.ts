@@ -17,4 +17,10 @@ export class RealtimeDatabaseService {
     // }
     
   }
+  leerDatos(ruta:string){
+    return this.db.object(ruta).valueChanges();
+  }
+  activar_buzzer(ruta:string,datos:any){
+    this.db.database.ref(ruta).set(datos);
+  }
 }
