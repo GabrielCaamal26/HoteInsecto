@@ -41,9 +41,9 @@ export class HumoPage implements OnInit {
       if (typeof res === 'number') {
         this.medicion = res;
       }
-      if (this.medicion<=500){
+      if (this.medicion<1450){
         this.resmedicion="No hay humo";
-      }else if(this.medicion>500){
+      }else if(this.medicion>=1450){
         this.resmedicion="Humo detectado";
       }
     })
