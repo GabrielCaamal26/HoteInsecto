@@ -25,7 +25,7 @@
         <ion-label>
           <p><ion-icon name="radio-outline"></ion-icon>Alarma</p>
           </ion-label>
-        <ion-toggle slot="end"></ion-toggle>
+        <ion-toggle (click)="handleToggleClick()" [checked]="toggleValue" ></ion-toggle>
       </ion-item>
     </ion-card-content>
   </ion-card>
